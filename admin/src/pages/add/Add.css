@@ -1,0 +1,101 @@
+.add {
+    width: 80%; /* Increased width for better layout */
+    max-width: 600px; /* Set a maximum width */
+    margin: 50px auto; /* Center the form */
+    color: #333; /* Dark text for readability */
+    font-size: 16px; /* Base font size */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Updated font family for modern look */
+    background-color: #ffffff; /* White background for cleanliness */
+    padding: 20px; /* Added padding for inner spacing */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for more depth */
+}
+
+.add form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between elements */
+}
+
+.add-img-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-img-upload img {
+    width: 150px; /* Slightly larger image */
+    border: 2px dashed #007bff; /* Dashed border with primary color */
+    border-radius: 8px;
+    padding: 10px;
+    transition: border-color 0.2s;
+}
+
+.add-img-upload input[type="file"]:hover + img {
+    border-color: #0056b3; /* Darker shade on hover */
+}
+
+.add-product-name,
+.add-product-description {
+    width: 100%;
+}
+
+.add-product-name input,
+.add-product-description textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+    background-color: #f8f9fa; /* Light background for inputs */
+}
+
+.add-product-name input:focus,
+.add-product-description textarea:focus {
+    border-color: #007bff; /* Focus color */
+    outline: none; /* Remove outline */
+}
+
+.add-category-price {
+    display: flex;
+    gap: 30px; /* Space between category and price fields */
+}
+
+.add-category-price select,
+.add-category-price input {
+    flex: 1; /* Make inputs flexible */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+    background-color: #f8f9fa; /* Light background for select and input */
+}
+
+.add-category-price select:focus,
+.add-category-price input:focus {
+    border-color: #007bff; /* Focus color */
+    outline: none; /* Remove outline */
+}
+
+.add-btn {
+    max-width: 150px; /* Adjust button width */
+    border: none;
+    padding: 12px;
+    background-color: #28a745; /* Green background for the button */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+.add-btn:hover {
+    background-color: #218838; /* Darker shade of green on hover */
+}
+
+.add-btn:disabled {
+    background-color: #d6d6d6; /* Disabled state */
+    cursor: not-allowed; /* Not-allowed cursor */
+}

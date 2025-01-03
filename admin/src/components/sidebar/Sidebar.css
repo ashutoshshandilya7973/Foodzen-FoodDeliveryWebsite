@@ -1,0 +1,56 @@
+.sidebar {
+    width: 250px; /* Fixed width for better design */
+    min-height: 100vh;
+    background-color: #ffffff; /* Background color */
+    border-right: 1.5px solid #e0e0e0; /* Subtle border */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    font-size: max(1vw, 10px);
+}
+
+.sidebar-options {
+    padding: 20px 15px; /* Adjusted padding for better layout */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduced gap for a tighter layout */
+}
+
+.sidebar-option {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Increased gap for better spacing */
+    padding: 12px 15px; /* Increased padding for touch targets */
+    border-radius: 8px; /* Rounded corners */
+    color: #555; /* Darker text color */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.sidebar-option:hover {
+    background-color: #f8f8f8; /* Light hover effect */
+    color: #000; /* Darker text on hover */
+}
+
+.sidebar-option.active {
+    background-color: #e0f7fa; /* Active state color */
+    border-left: 4px solid #009688; /* Left border for emphasis */
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: 70px; /* Collapsed width for smaller screens */
+    }
+
+    .sidebar-option p {
+        display: none; /* Hide text on smaller screens */
+    }
+
+    .sidebar-option img {
+        margin: 0 auto;
+        width: 24px; /* Icon size adjustment */
+        height: 24px; /* Maintain aspect ratio */
+    }
+
+    .sidebar-option.active {
+        background-color: transparent; /* No background for active state */
+    }
+}

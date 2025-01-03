@@ -1,0 +1,134 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff; /* White background for a clean look */
+  padding: 20px 30px; /* Added padding */
+  border-radius: 10px; /* Slightly rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navbar h1 {
+  color: #2c3e50; /* Darker text color for visibility */
+  font-size: 1.8rem; /* Slightly larger font size */
+}
+
+.navbar h1 span {
+  color: #222120; /* Red accent color for 'store' */
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 45px;
+  list-style: none;
+  padding: 0; /* Resetting padding */
+}
+
+.navbar-menu > a {
+  color: #34495e; /* Dark gray text for menu items */
+  text-decoration: none; /* No underline */
+  font-family: 'Outfit', sans-serif; /* Consistent font */
+  font-size: 18px; /* Consistent font size */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.navbar-menu > a:hover {
+  color: #e74c3c; /* Change color on hover */
+}
+
+.active {
+  border-bottom: 3px solid #e74c3c; /* Active link indication */
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center; /* Centering items */
+  gap: 15px;
+}
+
+.navbar-right .search,
+.navbar-right .basket {
+  width: 30px; /* Fixed width for icons */
+  height: 30px;
+}
+
+.navbar-right > button {
+  padding: 8px 15px; /* Padding for buttons */
+  border-radius: 20px; /* More rounded button */
+  background-color: #181717; /* Red background for button */
+  color: white; /* White text */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.navbar-right > button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+.dot {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  background-color: #e74c3c; /* Red dot for notifications */
+  border-radius: 50%;
+  margin-top: -35px;
+  margin-left: 27px;
+}
+
+.navbar-profile {
+  position: relative;
+}
+
+.nav-profile-dropdown {
+  position: absolute;
+  display: none; /* Hidden by default */
+  right: 0;
+  z-index: 1;
+  background-color: #fff; /* White background for dropdown */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+  display: flex; /* Show dropdown on hover */
+  flex-direction: column;
+  top: 40px; /* Positioning */
+  gap: 10px;
+  padding: 5px 15px; /* Inner padding */
+}
+
+.nav-profile-dropdown li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer; /* Pointer cursor on items */
+}
+
+.nav-profile-dropdown img {
+  width: 20px;
+}
+
+.nav-profile-dropdown li:hover {
+  color: #e74c3c; /* Hover effect for dropdown items */
+}
+
+@media (max-width: 1050px) {
+  .navbar-menu {
+      gap: 20px;
+      font-size: 17px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar-menu {
+      gap: 15px;
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar-menu {
+      display: none; /* Hide menu on small screens */
+  }
+}

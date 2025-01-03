@@ -1,0 +1,94 @@
+.explore-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 20px;
+    padding: 30px 15px; /* Increased padding for a more spacious look */
+    margin: 0 10px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 15px; /* Rounded corners for a modern feel */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.explore-menu h1 {
+    color: #333; /* Darker shade for better readability */
+    font-weight: 700; /* Bold font for emphasis */
+    font-family: 'Outfit', sans-serif; /* Ensuring font is applied */
+    text-align: center; /* Centered title */
+}
+
+.explore-menu-text {
+    max-width: 80%; /* Increased width for better visibility */
+    color: #555; /* Softer gray for text */
+    font-size: 1.1rem; /* Slightly larger font size */
+    text-align: center; /* Centered text */
+    margin-left: 90px;
+}
+
+.explore-menu-list {
+    display: flex;
+    justify-content: space-around; /* Equal space around items */
+    gap: 20px; /* Reduced gap for compact layout */
+    text-align: center;
+    margin: 20px 0;
+    overflow-x: auto; /* Horizontal scroll for overflow */
+    padding: 10px 0; /* Padding for the menu */
+}
+
+.explore-menu-list::-webkit-scrollbar {
+    height: 8px; /* Custom scrollbar height */
+}
+
+.explore-menu-list::-webkit-scrollbar-thumb {
+    background: #ccc; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+.explore-menu-list-items {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center align items */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.2s; /* Smooth transform */
+}
+
+.explore-menu-list-items:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.explore-menu-list-items img {
+    width: 8vw; /* Slightly larger image size */
+    height: 8vw;
+    min-width: 80px; /* Minimum size for images */
+    border-radius: 30%; /* Circular image */
+    transition: box-shadow 0.3s; /* Smooth transition for shadow */
+}
+
+.explore-menu-list-items img:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.explore-menu-list-items h2 {
+    margin-top: 10px; /* Space above the text */
+    color: #333; /* Dark text for contrast */
+    font-size: 1.2rem; /* Increased font size for better visibility */
+    font-family: 'Outfit', sans-serif; /* Ensure font consistency */
+}
+
+.explore-menu-list-items .active {
+    border: 4px solid tomato; /* Active state border */
+    transform: scale(1.1); /* Slightly enlarge active item */
+}
+
+@media (max-width: 1050px) {
+    .explore-menu-text {
+        max-width: 100%; /* Full width for smaller screens */
+        font-size: 14px;
+        text-align: left; /* Left-align text for smaller screens */
+    }
+
+    .explore-menu-list {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+}
